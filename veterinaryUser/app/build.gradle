@@ -1,0 +1,60 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.example.veterinerkullanici"
+        minSdkVersion 16
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    //2.4.0
+    implementation 'com.squareup.okhttp3:okhttp:3.4.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    // implementation 'com.android.support:appcompat-v7:28.0.0-alpha1'
+    //  implementation group: 'com.android.support', name: 'cardview-v7', version: '28.0.0-alpha1'
+
+    implementation 'com.squareup:android-times-square:1.6.5@aar'  //takvim kütüphanesi
+    implementation 'de.hdodenhof:circleimageview:3.1.0'  //resimlerin yuvarlak çerçeve olması için
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'androidx.annotation:annotation:1.1.0'
+    implementation "androidx.cardview:cardview:1.0.0" //Çerçeve
+
+    // implementation 'com.applandeo:material-calendar-view:1.7.0'
+    //  implementation 'com.android.support:design:28.0.0-alpha1'
+}
